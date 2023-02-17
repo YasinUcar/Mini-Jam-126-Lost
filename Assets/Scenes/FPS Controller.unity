@@ -721,7 +721,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 3
-  _orientation: {fileID: 0}
 --- !u!54 &1073046779
 Rigidbody:
   m_ObjectHideFlags: 0
