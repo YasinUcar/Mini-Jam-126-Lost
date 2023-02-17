@@ -7,6 +7,7 @@ public class ObjectDragAndDrop : MonoBehaviour, IDragHandler, IEndDragHandler, I
     [SerializeField] private Canvas myCanvas;
     private RectTransform RectTransformrectTransform;
     private CanvasGroup canvasGroup_;
+    [SerializeField] private GameObject havuz;
     void Start()
     {
         RectTransformrectTransform = GetComponent<RectTransform>();
@@ -22,6 +23,7 @@ public class ObjectDragAndDrop : MonoBehaviour, IDragHandler, IEndDragHandler, I
     }
     public void OnEndDrag(PointerEventData eventData)
     {
+        eventData.pointerDrag.transform.parent = havuz.transform;
         canvasGroup_.blocksRaycasts = true;
     }
 }
