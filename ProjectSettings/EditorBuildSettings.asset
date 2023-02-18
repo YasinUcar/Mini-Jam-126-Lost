@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/EnvanterSistemi.unity
+    guid: 0c1ece14b9a8dc647bd7d7c3dbfcd47b
+  - enabled: 1
+    path: Assets/Scenes/Puzzle.unity
+    guid: 974a03924d86bb24485631b31c8ae6fa
   m_configObjects: {}
