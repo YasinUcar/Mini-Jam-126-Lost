@@ -439,8 +439,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: GAME OVER
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7fbc1e5d17e061649aa2a1351d15f894, type: 2}
-  m_sharedMaterial: {fileID: 170343471340857891, guid: 7fbc1e5d17e061649aa2a1351d15f894, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cc1bb1dc5c1c1f14e8a3f29af2f4668d, type: 2}
+  m_sharedMaterial: {fileID: 6747244515520826843, guid: cc1bb1dc5c1c1f14e8a3f29af2f4668d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -626,7 +626,7 @@ GameObject:
   - component: {fileID: 1166229712}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -921,6 +921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _astreoid: {fileID: 7986759205643997615, guid: 77d3640ef53e6a241aa562052f6fcfaa, type: 3}
+  _speedSpawn: 0.5
 --- !u!1 &1709844414
 GameObject:
   m_ObjectHideFlags: 0
@@ -1075,8 +1076,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 30
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7fbc1e5d17e061649aa2a1351d15f894, type: 2}
-  m_sharedMaterial: {fileID: 170343471340857891, guid: 7fbc1e5d17e061649aa2a1351d15f894, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cc1bb1dc5c1c1f14e8a3f29af2f4668d, type: 2}
+  m_sharedMaterial: {fileID: 6747244515520826843, guid: cc1bb1dc5c1c1f14e8a3f29af2f4668d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
