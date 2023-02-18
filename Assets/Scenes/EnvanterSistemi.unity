@@ -1182,6 +1182,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   karakter: {fileID: 1345459817}
+  SilinecekNesneler:
+  - {fileID: 2626033482153120619}
+  - {fileID: 1100968736504417546}
+  - {fileID: 5198955286729694252}
+  - {fileID: 4675311212696844805}
+  - {fileID: 1815718666}
   taskCompleteTrigger:
   - {fileID: 7308999253892751677}
   - {fileID: 1452476938}
