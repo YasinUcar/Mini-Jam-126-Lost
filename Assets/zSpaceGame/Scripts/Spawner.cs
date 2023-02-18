@@ -20,16 +20,16 @@ public class Spawner : MonoBehaviour
     {
         _xPosMin = _camera.ViewportToWorldPoint(new Vector2(0, 0));
         _xPosMax = _camera.ViewportToWorldPoint(new Vector2(1, 0));
-
+        StartCoroutine(SpawnerAsteroid());
     }
 
     IEnumerator SpawnerAsteroid()
     {
-        new WaitForSeconds(2f);
+        new WaitForSeconds(1f);
         while (true)
         {
             Transform astreoid = Instantiate(_astreoid, new Vector3(Random.Range(_xPosMin.x, _xPosMax.x), 5f, 0f), Quaternion.identity);
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(0.5f);
         }
 
     }

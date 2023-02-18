@@ -5,18 +5,24 @@ using UnityEngine;
 public class ShipController : MonoBehaviour
 {
     [SerializeField] private float _speed;
-
+    [SerializeField] GameObject _gameOver;
+    [SerializeField] GameObject _explosion;
+    [SerializeField] private SpaceGameManager _spaceGameManager;
+    [SerializeField] private AudioSource _audioSource;
     private Rigidbody2D _rg;
     private Camera _mainCam;
     private Vector2 _minBounds, _maxBounds;
+
     private void Awake()
     {
         _rg = GetComponent<Rigidbody2D>();
+
 
     }
     void Start()
     {
         InitBounds();
+
     }
     void InitBounds()
     {
@@ -41,6 +47,20 @@ public class ShipController : MonoBehaviour
 
         transform.position = newPos;
 
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Meteor"))
+        {
+            _audioSource.Play();
+            _gameOver.SetActive(true);
+            Instantiate(_explosion, this.transform.position, Quaternion.identity);
+
+            _spaceGameManager.ResetGame();
+            this.gameObject.SetActive(false);
+
+        }
 
     }
+
 }
