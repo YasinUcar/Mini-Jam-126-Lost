@@ -4250,7 +4250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7374663942843735951, guid: 0961a698faf1a0c41a5453045632e29d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.91
+      value: 0.888
       objectReference: {fileID: 0}
     - target: {fileID: 7374663942843735951, guid: 0961a698faf1a0c41a5453045632e29d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4258,7 +4258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7374663942843735951, guid: 0961a698faf1a0c41a5453045632e29d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.01
+      value: -0.127
       objectReference: {fileID: 0}
     - target: {fileID: 7374663942843735951, guid: 0961a698faf1a0c41a5453045632e29d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4959,7 +4959,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4726261379034656515, guid: 482bf9543fc99b446b44840cc6108357, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.91
+      value: 0.888
       objectReference: {fileID: 0}
     - target: {fileID: 4726261379034656515, guid: 482bf9543fc99b446b44840cc6108357, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4967,7 +4967,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4726261379034656515, guid: 482bf9543fc99b446b44840cc6108357, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.01
+      value: -0.127
       objectReference: {fileID: 0}
     - target: {fileID: 4726261379034656515, guid: 482bf9543fc99b446b44840cc6108357, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5242,7 +5242,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7747076073603049743, guid: b0732257bba3acc4cb1ad28076422271, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.91
+      value: 0.888
       objectReference: {fileID: 0}
     - target: {fileID: 7747076073603049743, guid: b0732257bba3acc4cb1ad28076422271, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5250,7 +5250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7747076073603049743, guid: b0732257bba3acc4cb1ad28076422271, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.01
+      value: -0.127
       objectReference: {fileID: 0}
     - target: {fileID: 7747076073603049743, guid: b0732257bba3acc4cb1ad28076422271, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8107,8 +8107,9 @@ GameObject:
   - component: {fileID: 7588230919490897222}
   - component: {fileID: 6659056765289720887}
   - component: {fileID: 7588230919490897223}
+  - component: {fileID: 7588230919490897224}
   m_Layer: 0
-  m_Name: ev.001
+  m_Name: SonKapi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13808,8 +13809,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4550860946253605044}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 3.4344008, y: 4.0528893, z: -2.7448897}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalPosition: {x: 3.4344008, y: 4.0528893, z: -2.6965}
+  m_LocalScale: {x: 100, y: 90.881294, z: 97.67508}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 543450652427042729}
@@ -15143,8 +15144,9 @@ GameObject:
   - component: {fileID: 3348659427545106373}
   - component: {fileID: 2075366078947168155}
   - component: {fileID: 4550860946253605045}
+  - component: {fileID: 4550860946253605046}
   m_Layer: 0
-  m_Name: ev.043
+  m_Name: UstKapi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15164,6 +15166,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8391663607602187329, guid: 611d947833ec51549be73b7d54d9c3d5, type: 3}
+--- !u!114 &4550860946253605046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4550860946253605044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bebe1062e7a479445aeb347121abfc89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openAngle: 90
+  openSpeed: 2
+  closeSpeed: 2
+  waitTime: 5
 --- !u!23 &4555083353107749295
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15901,14 +15919,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6738500047246153600}
-  m_LocalRotation: {x: 0.5, y: 0.49999997, z: 0.5, w: -0.5}
+  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: -1.8750018, y: 1.3850002, z: 0.65094274}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 543450652427042729}
   m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: -90}
 --- !u!33 &5029668889523635197
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -18678,8 +18696,9 @@ GameObject:
   - component: {fileID: 6701286224059956378}
   - component: {fileID: 4921687114413265877}
   - component: {fileID: 6738500047246153601}
+  - component: {fileID: 6738500047246153602}
   m_Layer: 0
-  m_Name: ev.013
+  m_Name: MaviKapi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18699,6 +18718,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6130727047689345900, guid: 611d947833ec51549be73b7d54d9c3d5, type: 3}
+--- !u!114 &6738500047246153602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6738500047246153600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf33bcef10596af489446adc3bdaaba6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openAngle: 90
+  openSpeed: 2
+  closeSpeed: 2
+  waitTime: 5
 --- !u!1 &6750036518686376897
 GameObject:
   m_ObjectHideFlags: 0
@@ -20060,6 +20095,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7152569075524474733, guid: 611d947833ec51549be73b7d54d9c3d5, type: 3}
+--- !u!114 &7588230919490897224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476909938212026028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373100bea0629d84e8d845d08a6a7e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openAngle: 90
+  openSpeed: 2
+  closeSpeed: 2
+  waitTime: 5
 --- !u!1 &7591053346754525639
 GameObject:
   m_ObjectHideFlags: 0
@@ -22329,8 +22380,9 @@ GameObject:
   - component: {fileID: 7400541246662281272}
   - component: {fileID: 4217281039572452466}
   - component: {fileID: 8674303923367625950}
+  - component: {fileID: 8674303923367625951}
   m_Layer: 0
-  m_Name: ev.042
+  m_Name: PembeKapi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22350,6 +22402,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1318646583081702530, guid: 611d947833ec51549be73b7d54d9c3d5, type: 3}
+--- !u!114 &8674303923367625951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8674303923367625949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c13156ebf83ab414ca949d0a1b5e37d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openAngle: 90
+  openSpeed: 2
+  closeSpeed: 2
+  waitTime: 5
 --- !u!33 &8703330983063053797
 MeshFilter:
   m_ObjectHideFlags: 0
