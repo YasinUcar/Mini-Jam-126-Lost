@@ -24,7 +24,7 @@ public class KaldigiYerdenDevam : MonoBehaviour
                 yield return new WaitForSeconds(1);
                 congratulationsPanel.SetActive(true);
                 yield return new WaitForSeconds(1);
-                GoToLevel("EnvanterSistemi");
+                GoToLevel("GameScene");
             }
         }
     }
