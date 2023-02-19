@@ -5,8 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class KaldigiYerdenDevam : MonoBehaviour
 {
-    [SerializeField] private GameObject[] taskCompleteTrigger; // aktif olacak parçalar
-    [SerializeField] private GameObject congratulationsPanel;  //oyun bitiþ panel
+    [SerializeField] private GameObject[] taskCompleteTrigger; // aktif olacak parï¿½alar
+    [SerializeField] private GameObject congratulationsPanel;  //oyun bitiï¿½ panel
+    private void Awake()
+    {
+        Cursor.visible = enabled;
+        Cursor.lockState = CursorLockMode.None;
+    }
     void Update()
     {
         CheckTasks();
@@ -14,12 +19,13 @@ public class KaldigiYerdenDevam : MonoBehaviour
     void CheckTasks()
     {
         StartCoroutine(WaitForCompletion());
+
     }
     IEnumerator WaitForCompletion()
     {
         for (int i = 0; i < taskCompleteTrigger.Length; i++)
         {
-            if (taskCompleteTrigger.All(x => x.activeInHierarchy)) //tüm parçalar aktifse oyun biter ve kazanýr
+            if (taskCompleteTrigger.All(x => x.activeInHierarchy)) //tï¿½m parï¿½alar aktifse oyun biter ve kazanï¿½r
             {
                 yield return new WaitForSeconds(1);
                 congratulationsPanel.SetActive(true);
