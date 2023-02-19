@@ -10,7 +10,7 @@ public class ButtonManager : MonoBehaviour
     }
     public void Button()
     {
-        GoToLevel("EnvanterSistemi");
+        GoToLevel("GameScene");
     }
     private void GoToLevel(string levelSceneName)
     {
