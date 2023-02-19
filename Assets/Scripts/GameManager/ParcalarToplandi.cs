@@ -6,12 +6,12 @@ using UnityEngine.SceneManagement;
 public class ParcalarToplandi : MonoBehaviour
 {
     public GameObject karakter;
-    private Vector3 karakterPosition;//karakter konum verileri kayýt
+    private Vector3 karakterPosition;//karakter konum verileri kayï¿½t
     private bool nesnelerSilinsin = false;
     [SerializeField] private GameObject[] SilinecekNesneler;
 
-    [SerializeField] private GameObject[] taskCompleteTrigger; // aktif olacak parçalar
-    [SerializeField] private GameObject congratulationsPanel;  //oyun bitiþ panel
+    [SerializeField] private GameObject[] taskCompleteTrigger; // aktif olacak parï¿½alar
+    [SerializeField] private GameObject congratulationsPanel;  //oyun bitiï¿½ panel
     private void Start()
     {
         nesnelerSilinsin = PlayerPrefs.GetInt("nesnelerSilinsin", 0) == 1;
@@ -23,13 +23,13 @@ public class ParcalarToplandi : MonoBehaviour
             }
         }
         karakterPosition = karakter.transform.position;
-        // Daha önce kaydedilmiþ konum bilgilerini al
+        // Daha ï¿½nce kaydedilmiï¿½ konum bilgilerini al
         float playerX = PlayerPrefs.GetFloat("playerX", 0);
         float playerY = PlayerPrefs.GetFloat("playerY", 0);
         float playerZ = PlayerPrefs.GetFloat("playerZ", 0);
 
-        // Karakteri kaydedilen konuma taþý
-        karakter.transform.position = new Vector3(playerX, playerY, playerZ);
+        // Karakteri kaydedilen konuma taï¿½ï¿½
+        //karakter.transform.position = new Vector3(playerX, playerY, playerZ);
     }
     void Update()
     {
@@ -38,7 +38,7 @@ public class ParcalarToplandi : MonoBehaviour
   
     void CheckTasks()
     {
-        if (taskCompleteTrigger.All(x => x.activeInHierarchy)) //tüm parçalar aktifse oyun biter ve kazanýr
+        if (taskCompleteTrigger.All(x => x.activeInHierarchy)) //tï¿½m parï¿½alar aktifse oyun biter ve kazanï¿½r
         {
             PlayerPrefs.SetInt("nesnelerSilinsin", 1);
             karakterPosition = karakter.transform.position;

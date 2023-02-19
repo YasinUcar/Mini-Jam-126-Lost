@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class MaviKapi : MonoBehaviour
 {
-    public float openAngle = 90.0f; // Kapýnýn açýlma açýsý
-    public float openSpeed = 2.0f; // Kapýnýn açýlma hýzý
-    public float closeSpeed = 2.0f; // Kapýnýn kapanma hýzý
-    public float waitTime = 5.0f; // Kapýnýn açýk kalma süresi
+    public float openAngle = 90.0f; // Kapï¿½nï¿½n aï¿½ï¿½lma aï¿½ï¿½sï¿½
+    public float openSpeed = 2.0f; // Kapï¿½nï¿½n aï¿½ï¿½lma hï¿½zï¿½
+    public float closeSpeed = 2.0f; // Kapï¿½nï¿½n kapanma hï¿½zï¿½
+    public float waitTime = 5.0f; // Kapï¿½nï¿½n aï¿½ï¿½k kalma sï¿½resi
 
-    private bool isOpen = false; // Kapýnýn açýk olup olmadýðýný tutan deðiþken
-    private Quaternion startRotation; // Kapýnýn baþlangýç rotasyonu
-    private Quaternion targetRotation; // Kapýnýn hedef rotasyonu
-    private float elapsedTime = 0.0f; // Kapýnýn açýk kaldýðý süreyi tutan deðiþken
+    private bool isOpen = false; // Kapï¿½nï¿½n aï¿½ï¿½k olup olmadï¿½ï¿½ï¿½nï¿½ tutan deï¿½iï¿½ken
+    private Quaternion startRotation; // Kapï¿½nï¿½n baï¿½langï¿½ï¿½ rotasyonu
+    private Quaternion targetRotation; // Kapï¿½nï¿½n hedef rotasyonu
+    private float elapsedTime = 0.0f; // Kapï¿½nï¿½n aï¿½ï¿½k kaldï¿½ï¿½ï¿½ sï¿½reyi tutan deï¿½iï¿½ken
 
     private void Start()
     {
@@ -21,27 +21,28 @@ public class MaviKapi : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0)&&IsMouseOverObject()) // Sol fare butonuna basýldýðýnda
+        if (Input.GetMouseButtonDown(0)&&IsMouseOverObject()) // Sol fare butonuna basï¿½ldï¿½ï¿½ï¿½nda
         {
-            isOpen = !isOpen; // Kapýnýn durumunu tersine çevir
-            elapsedTime = 0.0f; // Açýk kaldýðý süreyi sýfýrla
+            isOpen = !isOpen; // Kapï¿½nï¿½n durumunu tersine ï¿½evir
+            elapsedTime = 0.0f; // Aï¿½ï¿½k kaldï¿½ï¿½ï¿½ sï¿½reyi sï¿½fï¿½rla
         }
-        if (isOpen) // Kapý açýlýyorsa
+        if (isOpen) // Kapï¿½ aï¿½ï¿½lï¿½yorsa
         {
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * openSpeed);
         }
-        else // Kapý kapanýyorsa
+        else // Kapï¿½ kapanï¿½yorsa
         {
             transform.rotation = Quaternion.Lerp(transform.rotation, startRotation, Time.deltaTime * closeSpeed);
         }
-        if (isOpen && elapsedTime < waitTime) // Kapý açýk ve belirlenen süre dolmadýysa
+        if (isOpen && elapsedTime < waitTime) // Kapï¿½ aï¿½ï¿½k ve belirlenen sï¿½re dolmadï¿½ysa
         {
-            elapsedTime += Time.deltaTime; // Geçen süreyi güncelle
+            elapsedTime += Time.deltaTime; // Geï¿½en sï¿½reyi gï¿½ncelle
         }
-        else // Kapý belirlenen süre boyunca açýk kaldýysa veya kapalýysa
+        else // Kapï¿½ belirlenen sï¿½re boyunca aï¿½ï¿½k kaldï¿½ysa veya kapalï¿½ysa
         {
-            isOpen = false; // Kapýyý kapat
+            isOpen = false; // Kapï¿½yï¿½ kapat
         }
+        
     }
     private bool IsMouseOverObject()
     {

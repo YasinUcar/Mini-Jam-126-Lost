@@ -14,6 +14,6 @@ public class Mesafe : MonoBehaviour
     {
         float distance = Vector3.Distance(karakter.transform.position, hedefNesne.transform.position);
         hedefNesneText.text = distance.ToString("F2")+"m";
-        Debug.Log(hedefNesneText.text);
+      
     }
 }

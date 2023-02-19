@@ -7,6 +7,8 @@ TagManager:
   - Meteor
   - GameManager
   - CinemachineTarget
+  - Mektup
+  - UstKapi
   layers:
   - Default
   - TransparentFX
