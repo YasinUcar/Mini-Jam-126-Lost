@@ -93,6 +93,7 @@ namespace StarterAssets
             {
                 _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
             }
+          
         }
 
         private void Start()
