@@ -1,9 +1,16 @@
 using UnityEngine;
-
+using UnityEngine.UI;
 public class EnvanterAcKapa : MonoBehaviour
 {
     [SerializeField] private GameObject EnvanterPanel;
+
+    [SerializeField] RectTransform rt;
     bool acildiMi;
+    private void Start()
+    {
+
+        rt.localScale = Vector3.zero;
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.B))
@@ -11,11 +18,11 @@ public class EnvanterAcKapa : MonoBehaviour
             if (!acildiMi)
             {
                 acildiMi = true;
-                EnvanterPanel.SetActive(true);
+                rt.localScale = Vector3.zero;
             }
             else if (acildiMi)
             {
-                EnvanterPanel.SetActive(false);
+                rt.localScale = new Vector3(1, 1, 1);
                 acildiMi = false;
             }
         }

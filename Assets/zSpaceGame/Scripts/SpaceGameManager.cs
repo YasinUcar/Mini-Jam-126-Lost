@@ -9,6 +9,7 @@ public class SpaceGameManager : MonoBehaviour
     public static SpaceGameManager Instance { get; private set; }
 
     [SerializeField] private TextMeshProUGUI _timeText;
+    [SerializeField] private GorevManager _gorevManager;
     private float time = 30f;
     public float GameTime { get => time; }
     private void Awake()
@@ -22,7 +23,9 @@ public class SpaceGameManager : MonoBehaviour
         if (time <= 0f)
         {
             //TODO : Bakılacak
-            SceneManager.LoadScene("MainScene");
+            _gorevManager.StringLevelName = "Last";
+            SceneManager.LoadScene("GameScene");
+
         }
     }
     public void ResetGame()

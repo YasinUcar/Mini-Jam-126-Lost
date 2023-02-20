@@ -1,11 +1,18 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI timerText;
     public float currentTime;
     [SerializeField] private float totalTime;
+    private void Awake()
+    {
+        
+            DontDestroyOnLoad(this.gameObject);
+        
+    }
     void Start()
     {
         currentTime = totalTime;
@@ -28,4 +35,15 @@ public class Timer : MonoBehaviour
         int seconds = (int)time % 60;
         return string.Format("{0:00}:{1:00}", minutes, seconds);
     }
+    private void Update()
+    {
+        if (currentTime <= 0f)
+        {
+            SceneManager.LoadScene("Menu");
+            PlayerPrefs.DeleteAll();
+        }
+        
+    }
+    
 }
+

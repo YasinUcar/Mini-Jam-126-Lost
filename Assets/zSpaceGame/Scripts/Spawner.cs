@@ -34,13 +34,13 @@ public class Spawner : MonoBehaviour
                 _speedSpawn = 0.5f;
                 break;
             case 25:
-                _speedSpawn = 0.3f;
+                _speedSpawn = 0.35f;
                 break;
             case 15:
-                _speedSpawn = 0.2f;
+                _speedSpawn = 0.25f;
                 break;
             case 10:
-                _speedSpawn = 0.1f;
+                _speedSpawn = 0.20f;
                 break;
 
         }

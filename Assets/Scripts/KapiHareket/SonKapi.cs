@@ -4,53 +4,75 @@ using UnityEngine;
 
 public class SonKapi : MonoBehaviour
 {
-    public float openAngle = 90.0f; // Kapýnýn açýlma açýsý
-    public float openSpeed = 2.0f; // Kapýnýn açýlma hýzý
-    public float closeSpeed = 2.0f; // Kapýnýn kapanma hýzý
-    public float waitTime = 5.0f; // Kapýnýn açýk kalma süresi
+    public float openAngle = 90.0f; // Kapï¿½nï¿½n aï¿½ï¿½lma aï¿½ï¿½sï¿½
+    public float openSpeed = 2.0f; // Kapï¿½nï¿½n aï¿½ï¿½lma hï¿½zï¿½
+    public float closeSpeed = 2.0f; // Kapï¿½nï¿½n kapanma hï¿½zï¿½
+    public float waitTime = 5.0f; // Kapï¿½nï¿½n aï¿½ï¿½k kalma sï¿½resi
 
-    private bool isOpen = false; // Kapýnýn açýk olup olmadýðýný tutan deðiþken
-    private Quaternion startRotation; // Kapýnýn baþlangýç rotasyonu
-    private Quaternion targetRotation; // Kapýnýn hedef rotasyonu
-    private float elapsedTime = 0.0f; // Kapýnýn açýk kaldýðý süreyi tutan deðiþken
-
+    private bool isOpen = false; // Kapï¿½nï¿½n aï¿½ï¿½k olup olmadï¿½ï¿½ï¿½nï¿½ tutan deï¿½iï¿½ken
+    private Quaternion startRotation; // Kapï¿½nï¿½n baï¿½langï¿½ï¿½ rotasyonu
+    private Quaternion targetRotation; // Kapï¿½nï¿½n hedef rotasyonu
+    private float elapsedTime = 0.0f; // Kapï¿½nï¿½n aï¿½ï¿½k kaldï¿½ï¿½ï¿½ sï¿½reyi tutan deï¿½iï¿½ken
+    [SerializeField] private GorevManager _gorevManager;
     private void Start()
     {
         startRotation = transform.rotation;
         targetRotation = Quaternion.Euler(targetRotation.x - openAngle, 0, 0);
     }
-    private void Update()
+    IEnumerator LerpPosition()
     {
-        if (Input.GetMouseButtonDown(0) && IsMouseOverObject()) // Sol fare butonuna basýldýðýnda
+        float time = 0;
+        Vector3 startPosition = transform.position;
+
+        while (time < 5f)
         {
-            isOpen = !isOpen; // Kapýnýn durumunu tersine çevir
-            elapsedTime = 0.0f; // Açýk kaldýðý süreyi sýfýrla
-        }
-        if (isOpen) // Kapý açýlýyorsa
-        {
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * openSpeed);
-        }
-        else // Kapý kapanýyorsa
-        {
-            transform.rotation = Quaternion.Lerp(transform.rotation, startRotation, Time.deltaTime * closeSpeed);
-        }
-        if (isOpen && elapsedTime < waitTime) // Kapý açýk ve belirlenen süre dolmadýysa
-        {
-            elapsedTime += Time.deltaTime; // Geçen süreyi güncelle
-        }
-        else // Kapý belirlenen süre boyunca açýk kaldýysa veya kapalýysa
-        {
-            isOpen = false; // Kapýyý kapat
+
+            //transform.position = Vector3.Lerp(startPosition, new Vector3(transform.position.x, transform.position.y, -1f), time / 5f);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(-90, 0, 90f), time / 5f);
+            time += Time.deltaTime;
+
+            yield return null;
         }
     }
-    private bool IsMouseOverObject()
+
+
+    public void KapiyiAc()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit))
-        {
-            return hit.transform == transform;
-        }
-        return false;
+        StartCoroutine(LerpPosition());
+        _gorevManager.StringLevelName = "Cat";
     }
+    // private void Update()
+    // {
+    //     if (Input.GetMouseButtonDown(0) && IsMouseOverObject()) // Sol fare butonuna basï¿½ldï¿½ï¿½ï¿½nda
+    //     {
+    //         isOpen = !isOpen; // Kapï¿½nï¿½n durumunu tersine ï¿½evir
+    //         elapsedTime = 0.0f; // Aï¿½ï¿½k kaldï¿½ï¿½ï¿½ sï¿½reyi sï¿½fï¿½rla
+    //     }
+    //     if (isOpen) // Kapï¿½ aï¿½ï¿½lï¿½yorsa
+    //     {
+    //         transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * openSpeed);
+    //     }
+    //     else // Kapï¿½ kapanï¿½yorsa
+    //     {
+    //         transform.rotation = Quaternion.Lerp(transform.rotation, startRotation, Time.deltaTime * closeSpeed);
+    //     }
+    //     if (isOpen && elapsedTime < waitTime) // Kapï¿½ aï¿½ï¿½k ve belirlenen sï¿½re dolmadï¿½ysa
+    //     {
+    //         elapsedTime += Time.deltaTime; // Geï¿½en sï¿½reyi gï¿½ncelle
+    //     }
+    //     else // Kapï¿½ belirlenen sï¿½re boyunca aï¿½ï¿½k kaldï¿½ysa veya kapalï¿½ysa
+    //     {
+    //         isOpen = false; // Kapï¿½yï¿½ kapat
+    //     }
+    // }
+    // private bool IsMouseOverObject()
+    // {
+    //     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+    //     RaycastHit hit;
+    //     if (Physics.Raycast(ray, out hit))
+    //     {
+    //         return hit.transform == transform;
+    //     }
+    //     return false;
+    // }
 }

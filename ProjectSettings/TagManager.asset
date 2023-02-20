@@ -11,6 +11,8 @@ TagManager:
   - UstKapi
   - Puzzle
   - PC
+  - SonKapi
+  - Cat
   layers:
   - Default
   - TransparentFX

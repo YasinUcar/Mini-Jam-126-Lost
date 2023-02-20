@@ -65,7 +65,7 @@ MonoBehaviour:
   bleedModeIndex: 0
   bleedAmount:
     overrideState: 1
-    value: 0.8
+    value: 1.23
   bleedLength:
     overrideState: 1
     value: 0
@@ -519,7 +519,7 @@ MonoBehaviour:
     value: 1
   pixelSize:
     overrideState: 1
-    value: 3
+    value: 2
 --- !u!114 &114502827126470872
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -541,10 +541,10 @@ MonoBehaviour:
     value: 0.667
   width:
     overrideState: 1
-    value: 15.2
+    value: 14.7
   amount:
     overrideState: 1
-    value: 0.52
+    value: 0.606
 --- !u!114 &114562249094731018
 MonoBehaviour:
   m_ObjectHideFlags: 3

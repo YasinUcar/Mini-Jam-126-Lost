@@ -7,7 +7,7 @@ public class PlayerRayCast : MonoBehaviour
 {
     [SerializeField] private GameObject _mektupCanvas;
     [SerializeField] private GorevManager _gorevManager;
-
+    [SerializeField] private GameObject _lastPanel;
 
     // Update is called once per frame
     void Update()
@@ -23,7 +23,8 @@ public class PlayerRayCast : MonoBehaviour
                     _mektupCanvas.SetActive(true);
                 }
                 // TODO : DİĞERLERİNİ EKLLEMEYİ UNUTMA!!
-                if (_gorevManager.StringLevelName == "Puzzle" || _gorevManager.StringLevelName == "Puzzle2" || _gorevManager.StringLevelName == "PC" || _gorevManager.StringLevelName == "Last" || _gorevManager.StringLevelName == "Last2")
+                if (_gorevManager.StringLevelName == "Puzzle" || _gorevManager.StringLevelName == "Puzzle2" || _gorevManager.StringLevelName == "PC" ||
+                _gorevManager.StringLevelName == "Last" || _gorevManager.StringLevelName == "Last2" || _gorevManager.StringLevelName == "Cat")
                     if (hit.transform.gameObject.CompareTag("UstKapi"))  //t�klan�lan nesnede bu script var ise
                     {
                         if (hit.transform.GetComponent<UstKapi>() != null)
@@ -43,6 +44,16 @@ public class PlayerRayCast : MonoBehaviour
                     {
                         SceneManager.LoadScene("SpaceGame");
                     }
+                if (_gorevManager.StringLevelName == "Last")
+                {
+                    if (hit.transform.gameObject.CompareTag("SonKapi"))
+                        hit.transform.GetComponent<SonKapi>().KapiyiAc();
+                }
+                if (hit.transform.gameObject.CompareTag("Cat"))
+                {
+                    _lastPanel.SetActive(true);
+                    Time.timeScale = 0f;
+                }
             }
         }
 

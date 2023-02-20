@@ -55,4 +55,8 @@ public class ParcalarToplandi : MonoBehaviour
         yield return new WaitForSeconds(deger);
         SceneManager.LoadScene(levelSceneName);
     }
+    public void PCLocation()
+    {
+        karakter.transform.position = new Vector3(15f, 15f, 15f);
+    }
 }
