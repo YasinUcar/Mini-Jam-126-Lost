@@ -38,6 +38,7 @@ public class Timer : MonoBehaviour
     }
     private void Update()
     {
+        print(currentTime);
         if (currentTime <= 0f)
         {
             SceneManager.LoadScene("GameScene");

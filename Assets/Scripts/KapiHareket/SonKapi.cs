@@ -13,7 +13,11 @@ public class SonKapi : MonoBehaviour
     private Quaternion startRotation; // Kap�n�n ba�lang�� rotasyonu
     private Quaternion targetRotation; // Kap�n�n hedef rotasyonu
     private float elapsedTime = 0.0f; // Kap�n�n a��k kald��� s�reyi tutan de�i�ken
-    [SerializeField] private GorevManager _gorevManager;
+    private GorevManager _gorevManager;
+    private void Awake()
+    {
+       _gorevManager = GameObject.FindGameObjectWithTag("GorevManager").GetComponent<GorevManager>();
+    }
     private void Start()
     {
         startRotation = transform.rotation;

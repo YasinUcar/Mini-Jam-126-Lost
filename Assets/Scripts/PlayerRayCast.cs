@@ -6,10 +6,14 @@ using UnityEngine.SceneManagement;
 public class PlayerRayCast : MonoBehaviour
 {
     [SerializeField] private GameObject _mektupCanvas;
-    [SerializeField] private GorevManager _gorevManager;
+    private GorevManager _gorevManager;
     [SerializeField] private GameObject _lastPanel;
 
     // Update is called once per frame
+    private void Awake()
+    {
+        _gorevManager = GameObject.FindGameObjectWithTag("GorevManager").GetComponent<GorevManager>();
+    }
     void Update()
     {
         if (Input.GetMouseButtonDown(0))

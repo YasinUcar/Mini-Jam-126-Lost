@@ -12,7 +12,11 @@ public class ParcalarToplandi : MonoBehaviour
 
     [SerializeField] private GameObject[] taskCompleteTrigger; // aktif olacak par�alar
     [SerializeField] private GameObject congratulationsPanel;  //oyun biti� panel
-    [SerializeField] private GorevManager _gorevManager;
+    private GorevManager _gorevManager;
+    private void Awake()
+    {
+        _gorevManager = GameObject.FindGameObjectWithTag("GorevManager").GetComponent<GorevManager>();
+    }
     private void Start()
     {
         nesnelerSilinsin = PlayerPrefs.GetInt("nesnelerSilinsin", 0) == 1;

@@ -15,15 +15,17 @@ public class Mesafe : MonoBehaviour
     [SerializeField] private TextMeshProUGUI hedefPCText;
     [SerializeField] private TextMeshProUGUI hedefkapiText;
     [SerializeField] private TextMeshProUGUI hedefkediText;
-    [SerializeField] private GorevManager _gorevManager;
+    private GorevManager _gorevManager;
     [SerializeField] private TextMeshProUGUI _gorevText;
     [SerializeField] private Image _gorevImage;
     [SerializeField] private Sprite mektupImage, puzzleImage, pcImage, lastImage, giftImage;
     [SerializeField] private GameObject player;
     public ParcalarToplandi parcalarToplandi;
 
-    private void Start()
+    private void Awake()
     {
+        _gorevManager = GameObject.FindGameObjectWithTag("GorevManager").GetComponent<GorevManager>();
+        print(_gorevManager.StringLevelName);
         switch (_gorevManager.StringLevelName)
         {
             case ("Puzzle"):
@@ -31,26 +33,19 @@ public class Mesafe : MonoBehaviour
                 break;
             case ("Puzzle2"):
 
-                player.transform.position = new Vector3(-5.9267354f, 0.335999429f, -5.17039156f);
+
 
                 break;
-            case ("PC"):
-
-                player.transform.position = new Vector3(0.646609724f, 0.075999856f, -1.86716795f);
+            case "PC":
+                player.transform.position = new Vector3(-5.9267354f, 0.335999429f, -5.17039156f);
                 break;
             case ("Last"):
-
-
+                player.transform.position = new Vector3(0.646609724f, 0.075999856f, -1.86716795f);
                 break;
             case ("Cat"):
 
                 break;
-            default:
 
-                player.transform.position = new Vector3(-2.4230001f, 3.07999992f, 3.98300004f);
-
-
-                break;
         }
     }
     void Update()

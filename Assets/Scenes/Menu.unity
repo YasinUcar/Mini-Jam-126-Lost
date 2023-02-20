@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.040745974, g: 0.050543424, b: 0.08338426, a: 1}
+  m_IndirectSpecularColor: {r: 0.22485095, g: 0.2513121, b: 0.3221126, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -520,6 +520,7 @@ GameObject:
   - component: {fileID: 496805421}
   - component: {fileID: 496805420}
   - component: {fileID: 496805423}
+  - component: {fileID: 496805424}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -707,6 +708,33 @@ MonoBehaviour:
   - assemblyQualifiedName: RLPro_NTSC, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   m_AfterStackBundles: []
+--- !u!114 &496805424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496805419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7be2658d35eb49d4fa0529111c379c5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: 323d1d7f5567c2145abe722a00cc73f1, type: 3}
+  bend: 1000
+  scanlineSize1: 100
+  scanlineSpeed1: -5
+  scanlineSize2: 10
+  scanlineSpeed2: -2
+  scanlineAmount: 0
+  vignetteSize: 0
+  vignetteSmoothness: 0
+  vignetteEdgeRound: 5
+  noiseSize: 45
+  noiseAmount: 0.05
+  redOffset: {x: 0, y: -0.01}
+  blueOffset: {x: 0, y: 0}
+  greenOffset: {x: 0, y: -0.001}
 --- !u!1 &519155890
 GameObject:
   m_ObjectHideFlags: 0
@@ -1159,6 +1187,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfed07a4e7954e8458551f6db4fc8f9f, type: 3}
+--- !u!1 &801227108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 801227109}
+  - component: {fileID: 801227110}
+  m_Layer: 0
+  m_Name: GorevManager
+  m_TagString: GorevManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &801227109
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801227108}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -28.287624, y: 1.7937317, z: 90}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &801227110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801227108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 228e786c29be83e47b5dba75c032f958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &903910567
 GameObject:
   m_ObjectHideFlags: 0

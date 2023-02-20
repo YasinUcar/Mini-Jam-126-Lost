@@ -7,11 +7,12 @@ public class KaldigiYerdenDevam : MonoBehaviour
 {
     [SerializeField] private GameObject[] taskCompleteTrigger; // aktif olacak par�alar
     [SerializeField] private GameObject congratulationsPanel;  //oyun biti� panel
-    [SerializeField] private GorevManager _gorevManager;
+    private GorevManager _gorevManager;
     private void Awake()
     {
         Cursor.visible = enabled;
         Cursor.lockState = CursorLockMode.None;
+        _gorevManager = GameObject.FindGameObjectWithTag("GorevManager").GetComponent<GorevManager>();
     }
     void Update()
     {
@@ -30,7 +31,7 @@ public class KaldigiYerdenDevam : MonoBehaviour
             {
                 yield return new WaitForSeconds(1);
                 congratulationsPanel.SetActive(true);
-                _gorevManager.StringLevelName = "PC";
+
                 yield return new WaitForSeconds(1);
                 GoToLevel("GameScene");
             }
@@ -38,6 +39,7 @@ public class KaldigiYerdenDevam : MonoBehaviour
     }
     private void GoToLevel(string levelSceneName)
     {
+        _gorevManager.StringLevelName = "PC";
         SceneManager.LoadScene(levelSceneName);
     }
 }

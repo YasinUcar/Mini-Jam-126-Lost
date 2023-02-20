@@ -5,7 +5,11 @@ using UnityEngine;
 public class MektupManager : MonoBehaviour
 {
     [SerializeField] private GameObject _player;
-    [SerializeField] private GorevManager _gorevManager;
+     private GorevManager _gorevManager;
+     private void Awake()
+     {
+        _gorevManager = GameObject.FindGameObjectWithTag("GorevManager").GetComponent<GorevManager>();
+     }
 
     private void OnEnable()
     {

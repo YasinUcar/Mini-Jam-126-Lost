@@ -9,12 +9,13 @@ public class SpaceGameManager : MonoBehaviour
     public static SpaceGameManager Instance { get; private set; }
 
     [SerializeField] private TextMeshProUGUI _timeText;
-    [SerializeField] private GorevManager _gorevManager;
+    private GorevManager _gorevManager;
     private float time = 30f;
     public float GameTime { get => time; }
     private void Awake()
     {
         Instance = this;
+        _gorevManager = GameObject.FindGameObjectWithTag("GorevManager").GetComponent<GorevManager>();
     }
     void Update()
     {
