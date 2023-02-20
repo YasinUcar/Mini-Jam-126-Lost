@@ -9,6 +9,8 @@ TagManager:
   - CinemachineTarget
   - Mektup
   - UstKapi
+  - Puzzle
+  - PC
   layers:
   - Default
   - TransparentFX

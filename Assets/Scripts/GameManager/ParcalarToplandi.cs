@@ -12,6 +12,7 @@ public class ParcalarToplandi : MonoBehaviour
 
     [SerializeField] private GameObject[] taskCompleteTrigger; // aktif olacak par�alar
     [SerializeField] private GameObject congratulationsPanel;  //oyun biti� panel
+    [SerializeField] private GorevManager _gorevManager;
     private void Start()
     {
         nesnelerSilinsin = PlayerPrefs.GetInt("nesnelerSilinsin", 0) == 1;
@@ -35,7 +36,7 @@ public class ParcalarToplandi : MonoBehaviour
     {
         CheckTasks();
     }
-  
+
     void CheckTasks()
     {
         if (taskCompleteTrigger.All(x => x.activeInHierarchy)) //t�m par�alar aktifse oyun biter ve kazan�r
@@ -45,11 +46,11 @@ public class ParcalarToplandi : MonoBehaviour
             PlayerPrefs.SetFloat("playerX", karakterPosition.x);
             PlayerPrefs.SetFloat("playerY", karakterPosition.y);
             PlayerPrefs.SetFloat("playerZ", karakterPosition.z);
-            congratulationsPanel.SetActive(true);
-            StartCoroutine(GoToLevelAfterDelay("Puzzle", 2.0f));
+            _gorevManager.StringLevelName = "Puzzle2";
+            //StartCoroutine(GoToLevelAfterDelay("Puzzle", 2.0f));
         }
     }
-    private  IEnumerator GoToLevelAfterDelay(string levelSceneName,float deger)
+    private IEnumerator GoToLevelAfterDelay(string levelSceneName, float deger)
     {
         yield return new WaitForSeconds(deger);
         SceneManager.LoadScene(levelSceneName);

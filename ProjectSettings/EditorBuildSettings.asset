@@ -9,12 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/EnvanterSistemi.unity
     guid: 0c1ece14b9a8dc647bd7d7c3dbfcd47b
   - enabled: 1
-    path: Assets/Scenes/Puzzle.unity
-    guid: 974a03924d86bb24485631b31c8ae6fa
-  - enabled: 1
     path: Assets/Scenes/SpaceGame.unity
     guid: ca59f866acb6e9c478c4cd09c9feaeeb
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: 9cedce6eecdd4f34181e770a7b0ba57c
+  - enabled: 1
+    path: Assets/Scenes/Puzzle.unity
+    guid: 8c6ae605026268642b79d44bb13cd17f
   m_configObjects: {}

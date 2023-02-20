@@ -7,6 +7,7 @@ public class KaldigiYerdenDevam : MonoBehaviour
 {
     [SerializeField] private GameObject[] taskCompleteTrigger; // aktif olacak par�alar
     [SerializeField] private GameObject congratulationsPanel;  //oyun biti� panel
+    [SerializeField] private GorevManager _gorevManager;
     private void Awake()
     {
         Cursor.visible = enabled;
@@ -29,6 +30,7 @@ public class KaldigiYerdenDevam : MonoBehaviour
             {
                 yield return new WaitForSeconds(1);
                 congratulationsPanel.SetActive(true);
+                _gorevManager.StringLevelName = "PC";
                 yield return new WaitForSeconds(1);
                 GoToLevel("GameScene");
             }
