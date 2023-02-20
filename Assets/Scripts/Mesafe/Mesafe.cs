@@ -31,16 +31,16 @@ public class Mesafe : MonoBehaviour
                 break;
             case ("Puzzle2"):
 
-                player.transform.position = new Vector3(-5.9267354f, 0.335999429f, -5.17039156f);
+
 
                 break;
             case ("PC"):
 
-                player.transform.position = new Vector3(0.646609724f, 0.075999856f, -1.86716795f);
+                player.transform.position = new Vector3(-5.9267354f, 0.335999429f, -5.17039156f);
                 break;
             case ("Last"):
 
-
+                player.transform.position = new Vector3(0.646609724f, 0.075999856f, -1.86716795f);
                 break;
             case ("Cat"):
 
@@ -79,14 +79,14 @@ public class Mesafe : MonoBehaviour
                 hedefPCText.text = distance2.ToString("F2") + "m";
                 _gorevText.text = "Use the computer";
                 _gorevImage.sprite = pcImage;
-              
+
                 break;
             case ("Last"):
                 float distance3 = Vector3.Distance(karakter.transform.position, hedefKapi.transform.position);
                 hedefkapiText.text = distance3.ToString("F2") + "m";
                 _gorevText.text = "Exit through the main door.";
                 _gorevImage.sprite = lastImage;
-              
+
                 break;
             case ("Cat"):
                 float distance4 = Vector3.Distance(karakter.transform.position, hedefKedi.transform.position);

@@ -9,9 +9,10 @@ public class Timer : MonoBehaviour
     [SerializeField] private float totalTime;
     private void Awake()
     {
-        
-            DontDestroyOnLoad(this.gameObject);
-        
+
+        DontDestroyOnLoad(this.gameObject);
+
+
     }
     void Start()
     {
@@ -39,11 +40,12 @@ public class Timer : MonoBehaviour
     {
         if (currentTime <= 0f)
         {
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("GameScene");
             PlayerPrefs.DeleteAll();
+            currentTime = totalTime;
         }
-        
+
     }
-    
+
 }
 
