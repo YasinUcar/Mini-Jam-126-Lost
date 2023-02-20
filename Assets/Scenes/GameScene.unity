@@ -2628,15 +2628,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ffdce26ccd04c7d409b429d2b48bb9cc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.01217
+      value: -0.0111
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ffdce26ccd04c7d409b429d2b48bb9cc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.00849
+      value: -0.0085
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ffdce26ccd04c7d409b429d2b48bb9cc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.01297
+      value: -0.0141
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ffdce26ccd04c7d409b429d2b48bb9cc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7200,6 +7200,10 @@ PrefabInstance:
       propertyPath: orthographic size
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7374663942843735944, guid: 0961a698faf1a0c41a5453045632e29d, type: 3}
+      propertyPath: m_AllowDynamicResolution
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7374663942843735946, guid: 0961a698faf1a0c41a5453045632e29d, type: 3}
       propertyPath: m_Name
       value: MainCamera
@@ -7394,6 +7398,33 @@ MonoBehaviour:
   - assemblyQualifiedName: RLPro_NTSC, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   m_AfterStackBundles: []
+--- !u!114 &1278569431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278569428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7be2658d35eb49d4fa0529111c379c5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: 323d1d7f5567c2145abe722a00cc73f1, type: 3}
+  bend: 1000
+  scanlineSize1: 100
+  scanlineSpeed1: -5
+  scanlineSize2: 10
+  scanlineSpeed2: -2
+  scanlineAmount: 0
+  vignetteSize: 0
+  vignetteSmoothness: 0
+  vignetteEdgeRound: 5
+  noiseSize: 45
+  noiseAmount: 0.05
+  redOffset: {x: 0, y: -0.01}
+  blueOffset: {x: 0, y: 0}
+  greenOffset: {x: 0, y: -0.001}
 --- !u!1 &1320265144
 GameObject:
   m_ObjectHideFlags: 0
