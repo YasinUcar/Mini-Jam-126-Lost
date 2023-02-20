@@ -31,16 +31,16 @@ public class Mesafe : MonoBehaviour
                 break;
             case ("Puzzle2"):
 
-
+                player.transform.position = new Vector3(-5.9267354f, 0.335999429f, -5.17039156f);
 
                 break;
             case ("PC"):
 
-                player.transform.position = new Vector3(-5.9267354f, 0.335999429f, -5.17039156f);
+                player.transform.position = new Vector3(0.646609724f, 0.075999856f, -1.86716795f);
                 break;
             case ("Last"):
 
-                player.transform.position = new Vector3(0.646609724f, 0.075999856f, -1.86716795f);
+
                 break;
             case ("Cat"):
 
